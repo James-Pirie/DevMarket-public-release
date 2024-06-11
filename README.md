@@ -3,7 +3,7 @@ A tool which collects and displays job listing data from Seek.com in relevant an
 
 - /data_collection is a beautiful soup web scraper. Colelcts listing information from seek.co.nz [more info here](https://devmarket.nz/about)
 - /database schema for our sql database
-- /flask_web a modular flask web application [see live here](devmarket.nz)
+- /flask_web a modular flask web application [see live here](https://devmarket.nz/)
 ## Installation
 
 **Installation via requirements.txt**
