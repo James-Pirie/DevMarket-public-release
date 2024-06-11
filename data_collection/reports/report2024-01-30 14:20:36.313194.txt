@@ -1,0 +1,8 @@
+REPORT 2024-01-30 14:20:36.312885 
+- Number of listings found: 545
+- Number of unique listings found: 2
+- Number of errors encountered: 2
+- Listing Example: None added
+ERRORS
+1 invalid literal for int() with base 10: '30d'
+2 invalid literal for int() with base 10: '30d'

@@ -1,0 +1,210 @@
+
+@media only screen and (max-width: 768px) {
+
+
+
+    .form-wrapper {
+      font-size: 1.5vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .secondary-header {
+        height: 7vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .form-control{
+        padding-bottom: 0.10vh;
+
+        font-size: 1.5vh;
+        width: 35vw;
+        height: 3vh;
+    }
+    .submit-button {
+        width: 25vw;
+        height: 3vh;
+    }
+    .text-item{
+        font-size: 2vw;
+    }
+    .gradient-info-bar {
+        height: 7vh;
+    }
+    .dev-market-text {
+        font-size: 25px;
+    }
+
+    .api-access-btn {
+        font-size: 3vw;
+        height: 4vh;
+    }
+
+    .full-width-image-container {
+        background-image: url('../images/background.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .full-width-image-container {
+        background-image: linear-gradient(to bottom, #7582E5, #364386);
+    }
+
+
+
+    .custom-navbar{
+        height: 6vh;
+    }
+    .graph-header-text{
+        font-size: 1.6vh;
+    }
+
+    .top-10-items{
+        font-size: 1.5vh;
+    }
+
+    .additional-div{
+        margin-top: 1vh;
+        height: 30vh;
+        border-bottom-left-radius: 5px;
+
+    }
+
+    .additional-div:last-child {
+        margin-left: 0vw;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .middle-div {
+        border-bottom-left-radius: 0px;
+        margin-left:1vw;
+        margin-right:1vw;
+    }
+
+    .data-text-details {
+        display: none;
+    }
+
+    .graph-container{
+        width: 82.9vw;
+    }
+
+
+    .box-container {
+    display: flex;
+    flex-direction: column; /* Change to column to stack boxes vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: -99vh;
+    }
+
+    .colored-box {
+        border-radius: 20px;
+        width: 40%; /* Set a width to make the boxes narrower */
+        height: 20%;
+        background-color: #5668C7;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        color: #D1D8FF;
+        margin-bottom: 25px;
+        transition: all 0.5s ease;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .colored-box:hover {
+        background-color: #7D8FEA;
+        width: 40%; /* Set a width to make the boxes narrower */
+        height: 20%;
+    }
+
+    .colored-box:first-child {
+        margin-top: 6%;
+    }
+
+
+    .colored-box:last-child {
+        margin-left: 8%;
+    }
+
+
+    .colored-box img {
+    width: 18vh;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .box-text {
+        font-weight: bold;
+        font-size: 4vw;
+        margin-top: 1.2vh;
+    }
+
+        .colored-box:last-child {
+        margin-right: 8%;
+    }
+
+    .colored-box:first-child {
+        margin-left: 0%;
+    }
+
+    .about-us-box{
+        width: 90vw;
+        border-radius: 15px;
+        margin-bottom: 2vh;
+    }
+
+    .about-title{
+        font-size: 3vh;
+    }
+
+    .new-line-div {
+        font-size: 2vh;
+    }
+
+
+    .pie-chart{
+        width: 80vw;
+        height: 54vh;
+
+
+
+    }
+
+    .pie-chart-container {
+        width: 85vw;
+        height: 59vh;
+
+    }
+
+    .pie-chart-title {
+        width: 85vw;
+
+    }
+
+    .graph-container-national {
+        display: flex;
+        flex-direction: column; /* Add this line to stack divs vertically */
+        align-items: center;
+    }
+    .pie-chart-and-title:first-child {
+        padding-left: 0vw;
+
+    }
+
+    .pie-chart-and-title {
+        margin-bottom: 2vh;
+        width: 100%;
+    }
+
+
+    .pie-chart-title-text{
+    }
+}

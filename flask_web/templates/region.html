@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>DevMarket - {{ region | title  }}</title>
+
+    {% include "style.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+
+<body>
+    {% include "header.html" %}
+
+    <div class="secondary-header">
+        <div class="form-container">
+            <form method="POST" class="form-wrapper">
+                {{ choose_region_form.csrf_token }}
+                <div>
+                    {{ choose_region_form.dropdown(class="form-control") }}
+                </div>
+                <button type="submit" class="submit-button">Search</button>
+            </form>
+        </div>
+    </div>
+
+    {% include "quick_info_bar.html" %}
+
+    <br>
+    
+    {% include "weekly_listings_graph.html" %}
+
+
+
+
+    <div class="additional-div blue-div">
+        <div class="additional-div-title">
+            <div class="graph-header-text">Top Languages</div>
+
+        </div>
+        <div class="top-10-items">
+            {% for language in top_languages %}
+                <div>
+                    {{ loop.index }}. {{ language | title }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="additional-div blue-div middle-div">
+        <div class="additional-div-title">
+            <div class="graph-header-text">Top Frameworks</div>
+
+        </div>
+        <div class="top-10-items">
+            {% for framework in top_frameworks %}
+                <div>
+                    {{ loop.index }}. {{ framework | title }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="additional-div blue-div">
+        <div class="additional-div-title">
+            <div class="graph-header-text">Top Suburbs</div>
+        </div>
+        <div class="top-10-items">
+            {% for suburb in top_suburb %}
+                <div>
+                    {{ loop.index }}. {{ suburb[0] | title }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

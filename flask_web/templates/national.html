@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>DevMarket - National Stats</title>
+
+    {% include "style.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    {% include "header.html" %}
+    {% include "quick_info_bar.html" %}
+    <br>
+    {% include "weekly_listings_graph.html" %}
+
+    <div class="graph-container-national">
+        <div class="pie-chart-and-title">
+            <div class="pie-chart-title"><div class="pie-chart-title-text">Number of current listings by region</div></div>
+            <div class="pie-chart-container">
+                <div class="pie-chart">
+                    <canvas id="myPieChart"></canvas>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var ctx = document.getElementById('myPieChart').getContext('2d');
+                    var chartData = {
+                        labels: {{ active_listings.labels | tojson | safe }},
+                        datasets: [{
+                            data: {{ active_listings.data | tojson | safe }},
+                        }],
+                    };
+                    var myPieChart = new Chart(ctx, {
+                        type: 'pie',
+                        data: chartData,
+                    });
+                });
+            </script>
+        </div>
+
+        <div class="pie-chart-and-title">
+            <div class="pie-chart-title"><div class="pie-chart-title-text">Number of total listings by region</div></div>
+            <div class="pie-chart-container">
+                <div class="pie-chart">
+                    <canvas id="myPieChart2"></canvas>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var ctx = document.getElementById('myPieChart2').getContext('2d');
+                    var chartData = {
+                        labels: {{ non_active_listings.labels | tojson | safe }},
+                        datasets: [{
+                            data: {{ non_active_listings.data | tojson | safe }},
+                        }],
+                    };
+                    var myPieChart = new Chart(ctx, {
+                        type: 'pie',
+                        data: chartData,
+                    });
+                });
+            </script>
+        </div>
+
+        <div class="pie-chart-and-title">
+            <div class="pie-chart-title"><div class="pie-chart-title-text">Current Listings by Languages</div></div>
+            <div class="pie-chart-container">
+                <div class="pie-chart">
+                    <canvas id="myPieChart3"></canvas>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var ctx = document.getElementById('myPieChart3').getContext('2d');
+                    var chartData = {
+                        labels: {{ active_listings_by_language.labels | tojson | safe }},
+                        datasets: [{
+                            data: {{ active_listings_by_language.data | tojson | safe }},
+                        }],
+                    };
+                    var myPieChart = new Chart(ctx, {
+                        type: 'pie',
+                        data: chartData,
+                    });
+                });
+            </script>
+        </div>
+
+        <div class="pie-chart-and-title">
+            <div class="pie-chart-title"><div class="pie-chart-title-text">Total Listings by Languages</div></div>
+            <div class="pie-chart-container">
+                <div class="pie-chart">
+                    <canvas id="myPieChart4"></canvas>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var ctx = document.getElementById('myPieChart4').getContext('2d');
+                    var chartData = {
+                        labels: {{ total_listings_by_language.labels | tojson | safe }},
+                        datasets: [{
+                            data: {{ total_listings_by_language.data | tojson | safe }},
+                        }],
+                    };
+                    var myPieChart = new Chart(ctx, {
+                        type: 'pie',
+                        data: chartData,
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+</html>

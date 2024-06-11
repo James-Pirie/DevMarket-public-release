@@ -1,0 +1,9 @@
+REPORT 2024-03-01_11-41-17
+- Number of listings found: 550
+- Number of unique listings found: 20
+- Number of errors encountered: 3
+- Listing Example: 74048166 Auckland Auckland CBD Serato Limited None Full time 2024-02-28 ['php'] ['slim']
+ERRORS
+1 'NoneType' object is not subscriptable
+2 'NoneType' object is not subscriptable
+3 'NoneType' object is not subscriptable

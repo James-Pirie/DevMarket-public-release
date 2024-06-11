@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "style.html" %}
+</head>
+<body>
+
+    {% include "header.html" %}
+
+    <div class="full-width-image-container"></div>
+
+    <div class="box-container">
+
+        <div class="colored-box" id="regionStatsBox">
+            <div class="box-text">Regional Stats</div>
+            <img class="box-image" src="../static/images/region.png" alt="Icon 1">
+        </div>
+        <div class="colored-box" id="nationalStatsBox">
+            <div class="box-text">National Stats</div>
+            <img class="box-image box-image-nz" src="../static/images/nz.png" alt="Icon 2">
+        </div>
+
+        <div class="colored-box" id="aboutBox">
+            <div class="box-text">About Us</div>
+            <img class="box-image" src="../static/images/trends.png" alt="Icon 3">
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("regionStatsBox").addEventListener("click", function() {
+            window.location.href = "{{ url_for('region_bp.regions') }}";
+        });
+
+         document.getElementById("nationalStatsBox").addEventListener("click", function() {
+            window.location.href = "{{ url_for('national_bp.national') }}";
+        });
+
+        document.getElementById("aboutBox").addEventListener("click", function() {
+            window.location.href = "{{ url_for('about_bp.about') }}";
+        });
+    </script>
+
+
+
+</body>
+</html>

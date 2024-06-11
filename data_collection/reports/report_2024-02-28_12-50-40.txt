@@ -1,0 +1,6 @@
+REPORT 2024-02-28_12-50-40
+- Number of listings found: 550
+- Number of unique listings found: 36
+- Number of errors encountered: 0
+- Listing Example: 74008908 Wellington None Younity None Full time 2024-02-26 ['javascript', 'typescript', 'sql', 'python'] ['vue']
+ERRORS

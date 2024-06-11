@@ -1,0 +1,49 @@
+<div class="secondary-graph-header">
+            <div class="graph-header-text graph-header-margin">Number of jobs listed weekly in {{ region | title }} </div>
+        </div>
+
+        <div class="graph-container-bar">
+
+            <div class="graph-container">
+                <div class="graph-chart-container">
+                    <canvas id="listingChart"></canvas>
+                </div>
+            </div>
+
+            <div class="data-text-details">
+                <div>Total: {{ total_listings }}</div>
+                <div>Weekly Average: {{weekly_average}}</div>
+                <div>Low: {{listing_low}}</div>
+                <div>High: {{listing_high}}</div>
+
+            </div>
+
+            <script>
+                const labels = {{ labels | tojson}};
+
+                const data = {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Number of Weekly Listings in {{ region | title }}',
+                        borderColor: 'rgb(68, 83, 161)',
+                        data: {{ data | tojson}},
+                    }]
+                };
+
+                const config = {
+                    type: 'line',
+                    data: data,
+                    options: {
+                        maintainAspectRatio: false,
+                    }
+                };
+
+                const myChart = new Chart(
+                    document.getElementById('listingChart'),
+                    config
+                );
+            </script>
+
+
+
+        </div>
