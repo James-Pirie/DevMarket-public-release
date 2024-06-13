@@ -1,7 +1,7 @@
-# cs-demand-tool
+# DevMarket
 A tool which collects and displays job listing data from Seek.com in relevant and interesting ways.
 
-- /data_collection is a beautiful soup web scraper. Colelcts listing information from seek.co.nz [more info here](https://devmarket.nz/about)
+- /data_collection is a beautiful soup web scraper. Collects listing information from seek.co.nz [more info here](https://devmarket.nz/about)
 - /database schema for our sql database
 - /flask_web a modular flask web application [see live here](https://devmarket.nz/)
 ## Installation
